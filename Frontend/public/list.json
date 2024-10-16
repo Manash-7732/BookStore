@@ -1,0 +1,81 @@
+[
+    {
+        "id":1,
+        "name":"Story",
+        "title":"Tales from the Imagination",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":2,
+        "name":"Fiction",
+        "title":"Truth Unveiled: Real Stories",
+        "catagory":"premium",
+        "price":"20$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":3,
+        "name":"Non-Fiction",
+        "title":"The Power of Knowledge",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":4,
+        "name":"Action",
+        "title":"Unstoppable Forces: Action Unleashed",
+        "catagory":"Premium",
+        "price":"20$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":5,
+        "name":"Adventure",
+        "title":"Journeys Beyond the Horizon",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":6,
+        "name":"Horrer",
+        "title":"If you intend to import that asset, put the file in the src directory",
+        "catagory":"Premium",
+        "price":"20$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    }, {
+        "id":7,
+        "name":"Music",
+        "title":"Whispers of Fear: A Horror Anthology",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":8,
+        "name":"Bio-Pic",
+        "title":"Chronicles of a Life Lived",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":9,
+        "name":"Kids",
+        "title":"Imagination Station: Stories for Kids",
+        "catagory":"Free",
+        "price":"00$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id":10,
+        "name":"Self-Help_Book",
+        "title":"Pathways to Personal Growth",
+        "catagory":"Premium",
+        "price":"50$",
+        "Image":"https://th.bing.com/th/id/OIP.xbJ0e-I28Vxr7q2RigBi7wAAAA?rs=1&pid=ImgDetMain"
+    }
+]
