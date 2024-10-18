@@ -9,7 +9,39 @@ function Login() {
         formState: { errors },
       } = useForm()
     
-      const onSubmit = (data) => console.log(data)
+      const onSubmit = async (data) => {
+        console.log(data);
+        const userInfo = {  
+          email_id: data.email, 
+          password: data.password,
+        };
+      
+        try {
+          const response = await fetch("http://localhost:4001/signup/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(userInfo),
+          });
+      
+          const responseData = await response.json();
+          console.log(`manash ${responseData}`);
+          localStorage.setItem("UserInfo", JSON.stringify(responseData.createdUser));
+      
+          if (response.ok) {
+            alert("Login Successfully");
+          } else {
+            alert(`Error: ${responseData.message} scs`);
+          }
+         
+        } catch (error) {
+          console.error("Error:", error);
+          alert("Failed to register, please try again.");
+        }
+        
+       
+      };
   return (
     
    <>

@@ -7,8 +7,8 @@ function Footer() {
         <hr />
     <footer className="footer footer-center  text-base-content rounded p-10 dark:bg-slate-900 dark:text-white">
   <nav className="grid grid-flow-col gap-4">
-    <a className="link link-hover">About us</a>
-    <a className="link link-hover">Contact</a>
+    <a className="link link-hover" href='/about'>About us</a>
+    <a className="link link-hover" href='/contactus'>Contact</a>
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
   </nav>
@@ -27,6 +27,7 @@ function Footer() {
       </a>
       <a>
         <svg
+        
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"

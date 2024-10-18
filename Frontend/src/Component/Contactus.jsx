@@ -16,7 +16,7 @@ function ContactUs() {
   return (
     <>
    <div className=''>
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 mt-[72px]">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 mt-[68px]">
       <div className="bg-white dark:bg-slate-900 dark:text-white p-8 rounded-md shadow-lg w-full max-w-lg ">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
         <form onSubmit={handleSubmit(onSubmit)}>

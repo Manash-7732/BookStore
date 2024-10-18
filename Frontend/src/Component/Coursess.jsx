@@ -1,13 +1,33 @@
-import React from 'react'
+import React, { useEffect,useState } from 'react';
+import axios  from 'axios';
+import Cards from './Cards';
+import list from '../../public/list.json';
 
-import Cards from './Cards'
-import list from '../../public/list.json'
-
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 
 function Coursess() {
-    console.log(list);
+    
+    const [Books, setBooks] = useState([]);
+
+    useEffect(() => {
+        const fetchBooks = async () => {
+            try {
+                const response = await fetch("http://localhost:4001/book");
+                if (!response.ok) { // Check if the response is successful
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json(); // Parse the JSON data
+                console.log(data);
+                setBooks(data); // Update the state with the fetched data
+            } catch (error) {
+                console.error("Error fetching books:", error);
+            }
+        };
+    
+        fetchBooks();
+    }, []);
+
   return (
     <>
     
@@ -22,8 +42,8 @@ function Coursess() {
    </Link>
    </div>
     </div>
-    <div className='grid grid-cols-3 gap-x-4 mt-10 p-3 gap-y-6' >
-        {list.map((item)=>(
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-4 mt-10 p-3 gap-y-6' >
+        {Books.map((item)=>(
              <Cards item={item} key={item.id}/>
         ))}
     </div>

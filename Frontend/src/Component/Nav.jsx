@@ -5,7 +5,7 @@ const navitem=(
       <li><a text-xl href='/'>Home</a></li>
       <li><a text-xl href='/courses'>Course</a></li>
       <li><a text-xl href='/contactus'>Contact</a></li>
-      <li><a text-xl>About</a></li>
+      <li><a text-xl href='/about'>About</a></li>
     </>
 )
 
@@ -83,9 +83,9 @@ function Nav() {
     </div>
   </div>
   {/* search bar */}
-  <div className='hidden md:block p-2'>
-  <label className="input input-bordered flex items-center gap-2 h-10">
-  <input type="text" className="grow" placeholder="Search" />
+  <div className='hidden md:block  dark:bg-slate-900 dark:text-white'>
+  <label className="input input-bordered flex items-center gap-2 dark:bg-slate-800 dark:text-white dark:border-gray-600 dark:placeholder-gray-400">
+  <input type="text" className="grow bg-white text-gray-900  dark:text-white  dark:placeholder-gray-400 p-2 rounded-md" placeholder="Search" />
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 16 16"

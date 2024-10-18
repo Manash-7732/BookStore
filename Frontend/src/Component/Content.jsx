@@ -1,13 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import list from "../../public/list.json";
 import Card from "./Card";
 function Content() {
- 
-  const filterData = list.filter((data) => (data.catagory === "Free"));
-  console.log(filterData[0].title);
+    const [Books, setBooks] = useState([]);
+
+    useEffect(() => {
+        const fetchBooks = async () => {
+            try {
+                const response = await fetch("http://localhost:4001/book");
+                if (!response.ok) { // Check if the response is successful
+                    throw new Error('Network response was not ok');
+                }
+                const data = await response.json(); // Parse the JSON data
+                console.log(data);
+                setBooks(data); // Update the state with the fetched data
+            } catch (error) {
+                console.error("Error fetching books:", error);
+            }
+        };
+    
+        fetchBooks();
+    }, []);
+  const filterData = Books.filter((data) => (data.catagory === "Free"));
+
 
   var settings = {
     dots: true,
