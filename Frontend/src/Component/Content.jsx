@@ -5,27 +5,29 @@ import "slick-carousel/slick/slick-theme.css";
 import list from "../../public/list.json";
 import Card from "./Card";
 function Content() {
-    const [Books, setBooks] = useState([]);
+  const [Books, setBooks] = useState([]);
 
-    useEffect(() => {
-        const fetchBooks = async () => {
-            try {
-                const response = await fetch("http://localhost:4001/book");
-                if (!response.ok) { // Check if the response is successful
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json(); // Parse the JSON data
-                console.log(data);
-                setBooks(data); // Update the state with the fetched data
-            } catch (error) {
-                console.error("Error fetching books:", error);
-            }
-        };
-    
-        fetchBooks();
-    }, []);
-  const filterData = Books.filter((data) => (data.catagory === "Free"));
+  useEffect(() => {
+    const fetchBooks = async () => {
+      try {
+        const response = await fetch(
+          `${import.meta.env.VITE_BACKEND_URL}/book`
+        );
+        if (!response.ok) {
+          // Check if the response is successful
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json(); // Parse the JSON data
+        console.log(data);
+        setBooks(data); // Update the state with the fetched data
+      } catch (error) {
+        console.error("Error fetching books:", error);
+      }
+    };
 
+    fetchBooks();
+  }, []);
+  const filterData = Books.filter((data) => data.catagory === "Free");
 
   var settings = {
     dots: true,
@@ -78,9 +80,9 @@ function Content() {
         <div className="mt-10 pb-2">
           <div className="slider-container ">
             <Slider {...settings}>
-               {filterData.map((item) =>(
-                <Card item={item} key={item.id}/>
-               ))}
+              {filterData.map((item) => (
+                <Card item={item} key={item.id} />
+              ))}
             </Slider>
           </div>
         </div>
